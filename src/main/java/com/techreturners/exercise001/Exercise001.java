@@ -10,12 +10,12 @@ public class Exercise001 {
     }
 
     public String generateInitials(String firstName, String lastName) {
-        return firstName.charAt(0)+"."+lastName.charAt(0);
+        return firstName.charAt(0) + "." + lastName.charAt(0);
     }
 
     public double addVat(double originalPrice, double vatRate) {
-        double vat = originalPrice+originalPrice*vatRate/100;
-        DecimalFormat formatter = new DecimalFormat("#0.00");
+        double vat = originalPrice + originalPrice * vatRate / 100;
+        NumberFormat formatter = NumberFormat.getCurrencyInstance();
         return Double.parseDouble(formatter.format(vat));
     }
 
@@ -23,11 +23,12 @@ public class Exercise001 {
         if(sentence.length() == 1)
             return sentence;
         else
-            return reverse(sentence.substring(1))+sentence.charAt(0);
+            return reverse(sentence.substring(1)) + sentence.charAt(0);
     }
 
     public int countLinuxUsers(List<User> users) {
-        // Add your code here
-        return 0;
+        int res = 0;
+        for(User curr : users) if (curr.getType() == "Linux") ++res;
+        return res;
     }
 }
