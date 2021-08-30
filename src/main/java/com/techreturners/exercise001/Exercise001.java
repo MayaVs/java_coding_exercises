@@ -15,7 +15,7 @@ public class Exercise001 {
 
     public double addVat(double originalPrice, double vatRate) {
         double vat = originalPrice + originalPrice * vatRate / 100;
-        NumberFormat formatter = NumberFormat.getCurrencyInstance();
+        DecimalFormat formatter = new DecimalFormat("#0.00");
         return Double.parseDouble(formatter.format(vat));
     }
 
