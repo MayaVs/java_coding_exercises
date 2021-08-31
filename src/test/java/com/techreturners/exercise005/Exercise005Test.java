@@ -61,4 +61,8 @@ public class Exercise005Test {
         assertTrue(ex005.isPangram("the 1 quick brown fox jumps over the 2 lazy dogs"));
     }
 
+    @Test //my test
+    public void checkSentenceWithNoLettersIsAPangram() {
+        assertFalse(ex005.isPangram("123 456_78!90?"));
+    }
 }
