@@ -23,6 +23,7 @@ public class Exercise003Test {
         s.put("Chocolate", 4);
         s.put("Mango Sorbet", 5);
         ex003.setStock(s);
+
     }
 
     @Test
