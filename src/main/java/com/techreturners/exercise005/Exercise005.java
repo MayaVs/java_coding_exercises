@@ -1,9 +1,20 @@
 package com.techreturners.exercise005;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class Exercise005 {
 
     public boolean isPangram(String input) {
-        throw new UnsupportedOperationException("You can delete this statement and add your code here.");
+        if(input.isEmpty()) return false;
+
+        String checkStr = input.toLowerCase().replaceAll("[^a-z]", "");
+        Map<Character, Boolean> checkMap = new HashMap<>();
+
+        for (int i = 0; i < checkStr.length(); ++i) checkMap.put(checkStr.charAt(i), true);
+        return checkMap.size() == 26;
     }
 
 }
