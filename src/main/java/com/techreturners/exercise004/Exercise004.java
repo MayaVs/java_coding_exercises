@@ -7,17 +7,17 @@ import static java.lang.Math.*;
 
 public class Exercise004 {
 
-    private LocalDateTime StartDateTime;
+    final private LocalDateTime startDateTime;
 
     public Exercise004(LocalDate date) {
-        StartDateTime = date.atStartOfDay();
+        startDateTime = date.atStartOfDay();
     }
 
     public Exercise004(LocalDateTime dateTime) {
-        StartDateTime = dateTime;
+        startDateTime = dateTime;
     }
 
     public LocalDateTime getDateTime() {
-        return StartDateTime.plusSeconds((long) pow(10, 9));
+        return startDateTime.plusSeconds((long) pow(10, 9));
     }
 }

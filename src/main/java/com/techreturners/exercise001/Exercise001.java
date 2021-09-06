@@ -1,7 +1,6 @@
 package com.techreturners.exercise001;
 
 import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.util.List;
 
 public class Exercise001 {
@@ -27,8 +26,6 @@ public class Exercise001 {
     }
 
     public int countLinuxUsers(List<User> users) {
-        int res = 0;
-        for(User curr : users) if (curr.getType() == "Linux") ++res;
-        return res;
+       return (int)users.stream().filter(i -> i.getType().equals("Linux")).count();
     }
 }
